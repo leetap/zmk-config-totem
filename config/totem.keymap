@@ -40,7 +40,7 @@
             bindings = <
            &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3           &kp NUMBER_4      &kp NUMBER_5      &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
            &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6        &kp F7           &kp F8        &kp F9        &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11       &kp F12          &kp F13       &kp F14       &kp F15       &bt BT_CLR_ALL
+&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &sys_reset    &bootloader      &kp F13       &kp F14       &kp F15       &bt BT_CLR_ALL
                                                 &trans                 &trans            &trans            &none         &kp RIGHT_SHIFT  &none
             >;
         };
