@@ -15,6 +15,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        nuncemail: nuncemail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp P &kp R &kp A &kp T &kp H &kp A &kp M &kp E &kp S &kp H &kp AT &kp N &kp E &kp X &kp T &kp L &kp E &kp V &kp E &kp L &kp C &kp O &kp F &kp F &kp E &kp E &kp DOT &kp D &kp E>;
+            label = "NUNCEMAIL";
+        };
+
+        Pass: Pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(P) &kp A &kp T &kp Y &kp A &kp S &kp T &kp N1 &kp N0 &kp DLLR>;
+            label = "PASS";
+        };
+
+        Gmail: Gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp M &kp E &kp P &kp R &kp A &kp T &kp H &kp A &kp M &kp E &kp S &kp H &kp P &kp A &kp T &kp I &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "GMAIL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,19 +52,19 @@
 
         nav_num {
             bindings = <
-           &kp TAB       &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_PLUS    &kp MINUS        &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp N9
-           &trans        &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL      &kp APOS         &kp LEFT     &kp DOWN      &kp RIGHT      &kp N4
-&kp LC(Q)  &kp LEFT_ALT  &trans  &trans                &trans                 &trans         &kp PRINTSCREEN  &kp DEL      &kp MINUS     &kp STAR       &kp BACKSLASH  &kp LC(E)
-                                 &trans                &trans                 &trans         &trans           &trans       &kp PERCENT
+           &kp TAB       &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp KP_PLUS     &kp MINUS        &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans
+           &trans        &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL       &kp APOS         &kp LEFT     &kp DOWN      &kp RIGHT      &trans
+&kp LC(Q)  &kp LEFT_ALT  &trans  &trans                &trans                 &kp ASTERISK    &kp PRINTSCREEN  &kp DEL      &kp MINUS     &kp STAR       &kp BACKSLASH  &kp LC(E)
+                                 &trans                &trans                 &trans          &trans           &trans       &trans
             >;
         };
 
         sym_func {
             bindings = <
-           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6      &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-           &kp TAB       &kp LBKT      &kp RBKT      &kp ENTER     &kp BSLH        &kp F6            &kp F7           &kp F8        &kp F9        &kp F10
-&kp GRAVE  &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans        &trans          &kp K_PLAY_PAUSE  &bootloader      &kp F13       &kp F14       &kp F15       &bt BT_CLR_ALL
-                                       &trans        &trans        &trans          &none             &kp RIGHT_SHIFT  &none
+        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6      &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0
+        &nuncemail    &trans        &trans        &trans        &trans          &trans            &trans        &trans           &trans        &Pass
+&trans  &Gmail        &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &trans          &kp K_PLAY_PAUSE  &kp C_VOL_DN  &kp C_VOLUME_UP  &trans        &trans        &bt BT_CLR_ALL
+                                    &trans        &trans        &trans          &none             &trans        &trans
             >;
         };
     };
